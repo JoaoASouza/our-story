@@ -1,0 +1,1 @@
+export const RELATIONSHIP_START_DATE = new Date('2024-07-13T15:00-03:00');
