@@ -1,3 +1,4 @@
+"use client";
 import { useRelationshipDuration } from "../hooks/date.hook";
 
 export default function Clock() {
@@ -17,25 +18,39 @@ export default function Clock() {
   const secondsText = duration.seconds === 1 ? "segundo" : "segundos";
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+      }}
+      className="montserrat-100"
+    >
       <p>Estamos juntos há:</p>
       <p>
-        {years} {yearsText}
+        <span style={{ fontWeight: "bold" }}>{years} </span> {yearsText}
       </p>
       <p>
-        {months} {monthsText}
+        <span style={{ fontWeight: "bold" }}>{months} </span>
+        {monthsText}
       </p>
       <p>
-        {days} {daysText}
+        <span style={{ fontWeight: "bold" }}>{days} </span>
+        {daysText}
       </p>
       <p>
-        {hours} {hoursText}
+        <span style={{ fontWeight: "bold" }}>{hours} </span>
+        {hoursText}
       </p>
       <p>
-        {minutes} {minutesText}
+        <span style={{ fontWeight: "bold" }}>{minutes} </span>
+        {minutesText}
       </p>
       <p>
-        {seconds} {secondsText}
+        <span style={{ fontWeight: "bold" }}>{seconds} </span>
+        {secondsText}
       </p>
     </div>
   );
