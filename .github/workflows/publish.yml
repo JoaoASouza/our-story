@@ -50,4 +50,5 @@ jobs:
     steps:
       - name: Publish to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/upload-artifact@v4
+        # uses: actions/deploy-pages@v4
